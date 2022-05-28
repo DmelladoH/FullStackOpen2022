@@ -92,7 +92,7 @@ const CourseInfo = () => {
             <h1>Web development curriculum</h1>
         
             {courses.map((course) => {
-            return <Course key={course.id} name={course.name} parts={course.parts} />
+                return <Course key={course.id} name={course.name} parts={course.parts} />
             })}
         </div>
 
