@@ -8,15 +8,22 @@ const Header = ({name}) => {
 }
 
 const Content = ({notes}) => {
+
+    let totalExercises = 0
+
     return (
         <div>
             <ul>
                 {notes.map((note) =>             
                     <li key = {note.id}>
                         {note.name} {note.exercises}
+                        {totalExercises += note.exercises}
                     </li>
                 )}
             </ul>
+            <div>
+                <p><strong>total of {totalExercises} exercises </strong></p>
+            </div>
         </div>
     )
 }
