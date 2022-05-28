@@ -11,28 +11,32 @@ const Content = ({notes}) => {
 
     let totalExercises = 0
 
+    const total = notes.reduce((s,p) => {
+        return totalExercises += p.exercises;
+    })
+
     return (
         <div>
             <ul>
                 {notes.map((note) =>             
                     <li key = {note.id}>
                         {note.name} {note.exercises}
-                        {totalExercises += note.exercises}
+                        
                     </li>
                 )}
             </ul>
             <div>
-                <p><strong>total of {totalExercises} exercises </strong></p>
+                <p><strong>total of {total} exercises </strong></p>
             </div>
         </div>
     )
 }
 
-const Course = ({course}) => {
+const Course = ({name, parts}) => {
     return (
         <div>
-            <Header name = {course.name} />
-            <Content notes = {course.parts} />
+            <Header name = {name} />
+            <Content notes = {parts} />
         </div>
     )
 }
@@ -59,8 +63,9 @@ const CourseInfo = () => {
           }
         ]
       }
+
     
-      return <Course course={course} />
+      return <Course name={course.name} parts={course.parts} />
   }
   
   export default CourseInfo
