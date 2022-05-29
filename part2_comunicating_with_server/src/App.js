@@ -1,6 +1,6 @@
 
-import CourseInfo from './CourseInfo'
-import Phonebook from './Phonebook'
+import CourseInfo from './components/CourseInfo'
+import PhoneBook from './components/PhoneBook'
 
 const App = () => {
 
@@ -8,7 +8,7 @@ const App = () => {
     <div>    
       <CourseInfo />
       <br></br>
-      <Phonebook />
+      <PhoneBook />
     </div>
 
   )
