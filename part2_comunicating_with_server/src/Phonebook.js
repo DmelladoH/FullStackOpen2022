@@ -32,6 +32,19 @@ const Phonebook = () => {
 
   const handlePhonebookSubmit = (event) => {
     event.preventDefault()
+    
+       
+    let valid = persons.filter((person) => {      
+      return person.name === newName
+    }).length === 0
+
+
+    if(!valid){
+      alert(`${newName} is already added to phonebook`)
+      setNewName("")
+      return
+    }
+    
     const newPerson = {
         id: persons.length + 1,
         name: newName
