@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 const Person = ({id, name, phoneNumber}) => {
    return <li key = {id}> name: {name} : {phoneNumber}</li>

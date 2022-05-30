@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import React from 'react';
 import PhoneBookForm from './PhoneBookForm'
-import FilterPhoneBook from './FilterPhoneBook'
+import SearchFilter from './SearchFilter'
 import PersonsDisplay from './PersonsDisplay'
 
 
@@ -52,11 +53,12 @@ const Phonebook = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <FilterPhoneBook 
+      <SearchFilter
+       text = "filter shown with"
        filterValue={filterPersons}
        handleFilterChange = {handleFilterChange}/>
 
-      <h3>ass a new</h3>
+      <h3>add a new</h3>
       <PhoneBookForm 
         newName= {newName}
         newPhoneNumber= {newPhoneNumber}
