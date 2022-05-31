@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Country = ({country}) => {
-    console.log(country.mame)
     const name = country.name.common
     const capital = country.capital
     const area = country.area
